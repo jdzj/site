@@ -1,0 +1,485 @@
+<!-- 
+开源工作台：
+源码地址：https://github.com/openspug/index
+创建者: openspug组织@https://github.com/openspug
+创建时间：2019-05-26
+联系邮箱：yupozhang@gmail.com
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>微录阁工具箱</title>
+  <meta name="keywords" content="微录阁,weiluge,微说,微导航,微录,微录博客" />
+  <meta name="description" content="微录阁工具箱有一些小工具。" />
+  <link rel="shortcut icon" href="/slogo.png" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #F7F7F7;
+    }
+
+    .container {
+      background-color: #fff;
+
+    }
+
+    .container-header {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: bold;
+      height: 40px;
+      padding-left: 10px;
+      
+    }
+
+    .container-body {
+      display: flex;
+      border-top: 1px solid #dfdfdf;
+      padding: 20px 10px 0 10px;
+      /*justify-content: space-between;*/
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .container div {
+      display: flex;
+    }
+
+    .item-block {
+      border: 1px solid #dfdfdf;
+      flex-direction: column;
+      height: 160px;
+      width: 24%;
+      margin-bottom: 20px;
+      margin-right: 10px;
+
+    }
+    a:link{                       /* 超链接正常状态下的样式 */
+      color: #000000;              /* 黑色 */
+      text-decoration:none;         /* 无下划线 */
+    }
+    a:visited{                      /* 访问过的超链接 */
+      color:#000000;                /* 黑色 */
+      text-decoration:none;         /* 无下划线 */
+    }
+
+
+    .item-top {
+      height: 80px;
+      padding: 20px;
+    }
+
+    .item-logo {
+       width: 60px;
+       height: 60px;
+      margin-right: 20px;
+
+    }
+    .item-logo img {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .item-body {
+      flex-direction: column;
+    }
+
+    .item-bottom {
+      height: 40px;
+      justify-content: space-around;
+      align-items: center;
+      color: #888888;
+      background-color: #F7F7F7;
+      font-size: 13px;
+    }
+
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+
+    .notice {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .divider {
+      height: 20px;
+      width: 1px;
+      background-color: #dfdfdf;
+    }
+  </style>
+</head>
+<body style="padding: 10px">
+<div align="center">
+<a href="http://weiluge.com"><img width="300" src="img/logo.png" alt="微录阁首页"></a>
+<style>
+#so360_logo{width:80px;height:29px;border:0;vertical-align:middle}
+#so360_keyword{width:260px;height:32px;line-height:18px;font:15px arial;padding:2px;margin-right:5px;border:2px solid #3A5FCD;outline:none;vertical-align:middle}
+#so360_submit{width:70px;height:32px;line-height:26px;border:0;color:#fff;background:#3A5FCD;font-weight:bold;font:bold 13px arial;padding:0 0 1px;padding:3px 0 0\9;cursor:pointer;vertical-align:middle}
+</style>
+<div id="so360">
+<form action="https://www.baidu.com/s" target="_blank" align="center">
+<a target="_blank" ><img title="微录阁定制的百度搜索" alt="百度搜索" src="https://img.baidu.com/search/img/baidulogo_clarity_80_29.gif" id="so360_logo"></a>
+<input type="text" x-webkit-speech="" autocomplete="off" name="wd" id="so360_keyword"><input type="submit" id="so360_submit" value="搜 索">
+<input type="hidden" name="ie" value="utf-8"> 
+<input type="hidden" name="src" value="zz">
+<input type="hidden" name="site" value="www.weiluge.com"> 
+<input type="hidden" name="rg" value="0">
+</form>
+</div>
+</div>
+<div class="container">
+  <div class="container-header">本站工具</div>
+  <div class="container-body">
+    <div class="item-block">
+      <a href="https://weiluge.jdzjw.com/tools/revise/" target="_blank" >
+      <div class="item-top">
+        <div class="item-logo"><img src="img/gitlab.png"></div>
+        <div class="item-body">
+          <span class="title">排版助手</span>
+          <span class="notice">一款便于文字排版的在线工具</span>
+        </div>
+      </div>
+    </a>
+        <div class="item-bottom">
+          <a href="https://weiluge.jdzjw.com/post-11.html" target="_blank">
+          <div>帮助文档</div>
+        </a>
+        </div>
+    </div>
+    <div class="item-block">
+      <a href="https://weiluge.jdzjw.com/tools/meitu/" target="_blank" >
+      <div class="item-top">
+        <div class="item-logo"><img src="img/pic.png"></div>
+        <div class="item-body">
+          <span class="title">微录美图</span>
+          <span class="notice">工作、学习累了？看看美图，美景美女美不胜收</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <div>看了还能下载</div>
+      </div>
+    </div>
+
+    <div class="item-block">
+       <a href="https://zxdic.com/" target="_blank" >
+      <div class="item-top" >
+        <div class="item-logo"><img src="img/chinese.png"></div>
+        <div class="item-body">
+          <span class="title">汉字拼音</span>
+          <span class="notice">汉字转拼音，带声调，小学生学习好帮手</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+	    <a href="https://weiluge.jdzjw.com/post-4.html" target="_blank">
+        <div>帮助文档</div>
+      </a>
+      </div>
+    </div>
+
+    <div class="item-block">
+       <a href="math.html" target="_blank" >
+      <div class="item-top" >
+        <div class="item-logo"><img src="img/math.png"></div>
+        <div class="item-body">
+          <span class="title">学数学</span>
+          <span class="notice">在线生成小学数学题目（含答案）</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+	    <a href="https://weiluge.jdzjw.com/post-28.html" target="_blank">
+        <div>帮助文档</div>
+      </a>
+      </div>
+    </div>
+
+    <div class="item-block">
+       <a href="https://weiluge.jdzjw.com/ji" target="_blank" >
+      <div class="item-top" >
+        <div class="item-logo"><img src="img/money.png"></div>
+        <div class="item-body">
+          <span class="title">微录记账</span>
+          <span class="notice">在线记账，了解自己的钱怎么用了。</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <div>记录收支情况</div>
+      </div>
+    </div>
+
+    <div class="item-block">
+       <a href="https://zxdic.com/bihua" target="_blank" >
+      <div class="item-top" >
+        <div class="item-logo"><img src="img/project.png"></div>
+        <div class="item-body">
+          <span class="title">汉字笔画</span>
+          <span class="notice">汉字笔画动画显示，在线练习</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <a href="https://weiluge.jdzjw.com/post-170.html" target="_blank">
+        <div>使用帮助</div>
+      </a>
+      </div>
+    </div>
+	
+    <div class="item-block">
+      <a href="jishu.html" target="_blank" >
+      <div class="item-top">
+        <div class="item-logo"><img src="img/time_record.png"></div>
+        <div class="item-body">
+          <span class="title">计数器</span>
+          <span class="notice">从0开始计数，左键给孩子辅导作业用</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <div>通过cookies保存</div>
+      </div>
+    </div>
+	
+	<div class="item-block">
+      <a href="jifen.html" target="_blank" >
+      <div class="item-top">
+        <div class="item-logo"><img src="img/score.png"></div>
+        <div class="item-body">
+          <span class="title">计分器</span>
+          <span class="notice">从100开始计分，给孩子辅导作业用</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <div>计数和计分不宜同时使用</div>
+      </div>
+    </div>
+	
+	<div class="item-block">
+      <a href="time.html" target="_blank" >
+      <div class="item-top">
+        <div class="item-logo"><img src="img/time.png"></div>
+        <div class="item-body">
+          <span class="title">电子时钟</span>
+          <span class="notice">一款带闹钟的电子时钟，简洁好看</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <a href="love.html" target="_blank" >
+        <div>爱的时间</div>
+      </div>
+    </div>
+		
+	<div class="item-block">
+      <a href="https://weiluge.jdzjw.com/tools/movies/" target="_blank" >
+      <div class="item-top">
+        <div class="item-logo"><img src="img/love.png"></div>
+        <div class="item-body">
+          <span class="title">奈菲影视</span>
+          <span class="notice">聚合站外资源，方便查看</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <div>本站不存储任何影视资源</div>
+      </div>
+    </div>
+
+	<div class="item-block">
+      <a href="write.html" target="_blank" >
+      <div class="item-top">
+        <div class="item-logo"><img src="img/article.png"></div>
+        <div class="item-body">
+          <span class="title">无厘头文章</span>
+          <span class="notice">纯属无厘头的长文章生成工具</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+	    <a href="https://weiluge.jdzjw.com/tools/yingxiao" target="_blank">
+        <div>营销内容生成</div>
+      </div>
+    </div>	
+	
+	<div class="item-block">
+	    <a></a>
+	    <div class="item-top">
+        <div class="item-logo"><img src="img/cloud.png"></div>
+        <div class="item-body">
+          <span class="title">其它工具</span>
+          <span class="notice">简洁的二维码、涂鸦、IP地址和实时经纬度等</span>
+        </div>
+      </div>
+
+      <div class="item-bottom">
+        <div onclick="window.open('')">微录阁</div>
+        <div class="divider"></div>
+        <div onclick="window.open('qr/')">二维码</div>
+        <div class="divider"></div>
+		<div onclick="window.open('')"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="container-header">优秀外站工具</div>
+  <div class="container-body">
+
+    <div class="item-block">
+      <a href="http://tool.mkblog.cn/whois/" target="_blank" >
+      <div class="item-top" >
+        <div class="item-logo"><img src="img/spug.png"></div>
+        <div class="item-body">
+          <span class="title">whois查询</span>
+          <span class="notice">孟坤的这款whois查询速度快，简洁好用</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <a href="http://tool.mkblog.cn" target="_blank">
+        <div>孟坤工具箱</div>
+      </a>
+      </div>
+    </div>
+
+    <div class="item-block">
+    <a href="https://github.com/" target="_blank" >
+    <div class="item-top" >
+        <div class="item-logo"><img src="img/github.png"></div>
+        <div class="item-body">
+          <span class="title">Github</span>
+          <span class="notice">全世界最好的开源代码网站</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <div>微录的好多代码从这里来的</div>
+      </a>
+      </div>
+    </div>
+
+
+    <div class="item-block">
+      <a href="https://www.fotor.com.cn/" target="_blank">
+      <div class="item-top">
+        <div class="item-logo"><img src="img/sheji.png"></div>
+        <div class="item-body">
+          <span class="title">fotor 懒设计</span>
+          <span class="notice">在线设计平台，素材丰富，点击注册使用</span>
+        </div>
+      </div>
+    </a>
+        <div class="item-bottom">
+		 <a href="https://www.fotor.com.cn" target="_blank">
+          <div>确实不错哦</div>
+        </div>
+    </div>
+
+    <div class="item-block">
+      <a href="https://qztool.ename.com/history/statuslist" target="_blank">
+      <div class="item-top">
+        <div class="item-logo"><img src="img/domain.png"></div>
+        <div class="item-body">
+          <span class="title">域名多维查询</span>
+          <span class="notice">易名的一款域名建站历史查询工具</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+	    <a href="http://www.cxw.com" target="_blank">
+        <div>易名的查询网</div>
+      </div>
+    </div>
+
+    <div class="item-block">
+      <a href="http://tool.chinaz.com/" target="_blank">
+      <div class="item-top" >
+        <div class="item-logo"><img src="img/jenkins.png"></div>
+        <div class="item-body">
+          <span class="title">站长工具</span>
+          <span class="notice">查收录，查备案，查链接</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <div>一直没启用https也是奇怪</div>
+      </div>
+    </div>
+
+    <div class="item-block">
+      <a href="https://www.iconfont.cn/" target="_blank">
+      <div class="item-top" >
+        <div class="item-logo"><img src="img/panda.png"></div>
+        <div class="item-body">
+          <span class="title">图标下载</span>
+          <span class="notice">很丰富的图标下载资源</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <a href="https://www.aconvert.com/" target="_blank">
+		<div>文件转换</div>
+      </div>
+    </div>
+
+    <div class="item-block">
+      <a href="https://tongji.baidu.com" target="_blank">
+      <div class="item-top" >
+        <div class="item-logo"><img src="img/Stats.png"></div>
+        <div class="item-body">
+          <span class="title">网站统计</span>
+          <span class="notice">百度统计</span>
+        </div>
+      </div>
+    </a>
+      <div class="item-bottom">
+        <div>网站访问统计</div>
+      </div>
+    </div>
+
+    <div class="item-block">
+      <div class="item-top">
+        <div class="item-logo"><img src="img/cloud.png"></div>
+        <div class="item-body">
+          <span class="title">云系统</span>
+          <span class="notice">七牛、阿里云、爱名网等域名和主机平台</span>
+        </div>
+      </div>
+
+      <div class="item-bottom">
+        <div onclick="window.open('https://www.qiniu.com/')">七牛云</div>
+        <div class="divider"></div>
+        <div onclick="window.open('http://www.aliyun.com/')">阿里云</div>
+        <div class="divider"></div>
+		<div onclick="window.open('https://www.22.cn/')">爱名网</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f13133c93f4b299e1e0d2b27a7b8dc8e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

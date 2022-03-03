@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<title>计数器 - 微录阁</title>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta charset="UTF-8">
+<script type="text/javascript">
+function SetCookie(name,value)
+{
+var Days = 1;
+var exp = new Date();
+exp.setTime(exp.getTime() + Days*24*60*60*1000);
+document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+function getCookie(name)
+{
+var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+if(arr != null)
+return unescape(arr[2]);
+return null;
+}
+window.onload = function(){
+var btn = document.getElementsByTagName('button')[0];
+var span = document.getElementsByTagName('span')[0];
+var time;
+var num = getCookie('thiscookienum');
+span.innerHTML = (num == null?num=0:num*=1);
+btn.onmousedown = function(){
+num+=1;
+time = setTimeout(function(){
+num -= 2;
+},1000);
+}
+btn.onmouseup = function(){
+clearTimeout(time);
+span.innerHTML = num;
+SetCookie('thiscookienum',num);
+}
+}
+</script>
+<style type="text/css">
+body {margin: 0px; padding:0px; font-family:"微软雅黑", Arial, "Trebuchet MS", Verdana, Georgia,Baskerville,Palatino,Times; font-size:16px;}
+div{margin-left:auto; margin-right:auto;}
+a {text-decoration: none; color: #1064A0;}
+a:hover {color: #0078D2;}
+img { border:none; }
+h1,h2,h3,h4 {
+/*	display:block;*/
+	margin:0;
+	font-weight:normal; 
+	font-family: "微软雅黑", Arial, "Trebuchet MS", Helvetica, Verdana ; 
+}
+h1{font-size:200px; color:#0188DE; padding:20px 0px 10px 0px;}
+h2{color:#0188DE; font-size:16px; padding:10px 0px 40px 0px;}
+
+#page{width:410px; padding:20px 20px 40px 20px; margin-top:80px;}
+.button{width:180px; height:28px; margin-left:0px; margin-top:10px; background:#009CFF; border-bottom:4px solid #0188DE; text-align:center;}
+.button a{width:180px; height:28px; display:block; font-size:14px; color:#fff; }
+.button a:hover{ background:#5BBFFF;}
+</style>
+</head>
+<body>
+<style>
+#so360_logo{width:80px;height:29px;border:0;vertical-align:middle}
+#so360_keyword{width:260px;height:32px;line-height:18px;font:15px arial;padding:2px;margin-right:5px;border:2px solid #3A5FCD;outline:none;vertical-align:middle}
+#so360_submit{width:100px;height:32px;line-height:26px;border:0;color:#fff;background:#3A5FCD;font-weight:bold;font:bold 13px arial;padding:0 0 1px;padding:3px 0 0\9;cursor:pointer;vertical-align:middle}
+#welog_button{width:150px;height:40px;line-height:26px;border:0;color:#fff;background:#3A5FCD;font-weight:bold;font:bold 13px arial;padding:0 0 1px;padding:3px 0 0\9;cursor:pointer;vertical-align:middle}
+</style>
+<div id="page" style="border-style:dashed;border-color:#e4e4e4;line-height:30px;background:url(jdsy.png) no-repeat right;">
+	<br />
+	<h1><span>0</span></h1><br /><br /><br />
+	<button id="welog_button">点 击 计 数</button> <br />
+	<font color="#666666">使用方法：单击一次加一，长按一秒减一。</font><br />
+	<form action="https://www.baidu.com/s" target="_blank" align="left">
+<input type="text" x-webkit-speech="" autocomplete="off" name="wd" id="so360_keyword"><input type="submit" id="so360_submit" value="有问题？搜一下">
+<input type="hidden" name="ie" value="utf-8"> 
+<input type="hidden" name="src" value="zz">
+<input type="hidden" name="site" value="www.weiluge.com"> 
+<input type="hidden" name="rg" value="0">
+</form>
+</div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f13133c93f4b299e1e0d2b27a7b8dc8e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

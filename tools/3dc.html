@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="zh-cmn-Hans">
+<head>
+<title>微秤,iphone屏幕电子秤,3D Touch Scale 屏幕电子秤 - 微录阁</title>
+<meta charset="utf-8" /> 
+<meta name="description" content="基于苹果3D Touch技术的屏幕电子秤，只需一把铁勺子，就可以用 iPhone 来称重啦！" />
+<meta name="author" content="Dandy Weng,copy by weiluge.com" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-title" content="屏幕电子秤" />
+<style>
+html, body {
+	height: 100%;
+}
+p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    line-height: 1.5;
+}
+a {
+	color: #4c667d;
+	text-decoration: none;
+}
+body {
+	margin: 0;
+	padding: 0 1.25em;
+	color: rgba(5, 15, 25, 0.75);
+	font-family: -apple-system, BlinkMacSystemFont, "opensans", "Optima", "Microsoft Yahei", sans-serif;
+	-webkit-user-select: none;
+}
+body::after {
+	position: fixed;
+	content: " ";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(237,238,245,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(237,238,245,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(237,238,245,1) 100%);
+}
+body > header {
+	margin-bottom: 1.25em;	
+}
+body > header > nav {
+	text-align: center;
+	padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+body > header > nav h1 {
+	display: inline;
+    font-size: 14px;
+	font-weight: normal;
+    border-right: 1px solid #eee;
+    padding-right: 1em;
+}
+body > header > nav p {
+	display: inline;
+	margin-left: 5px;
+}
+body > header > nav a {
+	font-size: 12px;
+	margin: 0 5px;
+}
+body > section {
+	margin-bottom: 1.5em;
+	background-color: #fafbfd;
+	border-radius: 5px;
+    box-shadow: 0px 12px 50px 3px rgba(0, 15, 75, 0.2);
+}
+#tare {
+	height: 50px;
+	line-height: 50px;
+	margin-top: 1em;
+	text-align: center;
+}
+#tare > * {
+	vertical-align: middle;
+}
+#tare > span {
+	font-size: 14px;
+}
+#weight {
+	height: 100px;
+}
+#weight > p {
+	text-align: center;
+    line-height: 100px;
+}
+#weight > p span {
+	font-size: 3.75em;
+}
+#scale {
+	background-image: url("spoon.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 230px;
+	line-height: 230px;
+	padding-left: 1em;
+	text-align: center;
+}
+#wechat {
+	padding: 1.5em;
+	text-align: center;
+}
+#qr {
+	max-width: 170px;
+	max-height: 170px;
+	margin: 1em auto;
+}
+#showcase {
+	text-align: center;
+	box-shadow: none;
+	background-color: transparent;
+}
+#showcase img {
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: 0px 12px 50px 3px rgba(0, 15, 75, 0.2);
+}
+footer {
+	text-align: center;
+	line-height: 1.45;
+	font-size: 10px;
+	margin-top: -1em;
+	padding-bottom: 2em;
+}
+footer > strong {
+	display: none;
+	font-size: 16px;
+    margin: 100px 0;
+}
+footer > p {
+	opacity: .5;
+}
+input[type=range] {
+	-webkit-appearance: none;
+    width: 60%;
+    margin-left: 0;
+	margin-right: 5px;
+}
+input[type=range]:focus {
+	outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	background-color: #fafbfd;
+	border: 1px solid rgba(0, 5, 25, 0.1);
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+	margin-top: -16px;
+	box-shadow: 0px 5px 20px 2px rgba(0, 15, 35, 0.1);
+}
+input[type=range]::-webkit-slider-runnable-track {
+	height: 2px;
+	background: #ddd;
+	border: none;
+	border-radius: 3px;
+	-webkit-user-select: none;
+}
+@media (min-device-height: 736px){
+	#scale {
+		height: 300px;
+		line-height: 300px;
+		padding-left: 2.75em;
+	}
+}
+@media (orientation:landscape){
+	#tare,
+	section {
+		display: none;
+	}
+	footer > strong {
+		display: block;
+	}
+}
+</style>
+</head>
+<body ontouchstart="">
+<header>
+	<nav>
+    	<h1>3D Touch 屏幕电子秤</h1>
+        <p><a href="/post-75.html" rel="help">使用说明</a> · <a href="http://www.dandyweng.com" target="_blank" rel="author">原作者：翁天信</a></p>
+    </nav>
+	<div id="tare">
+        <span>调整皮重：</span>
+        <input id="tare-range" type="range" value="0" min="0" max="80" oninput="updateTareValue(this.value);">
+        <span id="tare-value">0g</span>
+    </div>
+</header>
+
+<section id="weight">
+	<p><span id="gram">0</span>g</p>
+</section>
+
+<section id="scale">
+	<span>金属勺子放置区</span>
+</section>
+
+<section id="wechat">
+	<p>关注我们的微信公众号<br><span style="color: #951015; font-weight: bold; -webkit-user-select: text; user-select: text;">微录阁</span><br></p>
+	<img id="qr" src="/images/gzh.jpg" />
+</section>
+
+<footer>
+	<strong>请用iPhone Safari浏览器打开，并在竖屏状态下使用</strong>
+	<p>
+    	Designed and developed by Dandy Weng.<br>
+        Copy from dandyweng.com by weiluge.com. 
+    </p>
+    <p style="text-indent: -9999px;"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f13133c93f4b299e1e0d2b27a7b8dc8e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</p>
+</footer>
+<script>
+var element = document.getElementById("scale");
+var weightVal = document.getElementById("gram");
+var tareVal = 0;
+
+function onTouchStartMove(e) {
+    e.preventDefault();
+    checkForce(e);
+}
+
+function onTouchEnd(e) {
+    e.preventDefault();
+    touch = null;
+}
+
+function checkForce(e) {
+    touch = e.touches[0];
+    setTimeout(refreshForceValue.bind(touch), 10);
+}
+
+function refreshForceValue() {
+    var touchEvent = this;
+    var forceValue = 0;
+    if (touchEvent) {
+        forceValue = touchEvent.force || 0;
+        setTimeout(refreshForceValue.bind(touch), 10);
+    } else {
+        forceValue = 0;
+    }
+    weightVal.innerHTML = Math.round(forceValue * 385) - tareVal;
+}
+
+function updateTareValue(val) {
+    document.getElementById("tare-value").innerText = "-" + val + "g";
+    tareVal = val;
+}
+
+(function() {
+    element.addEventListener("touchstart", onTouchStartMove, false);
+    element.addEventListener("touchmove", onTouchStartMove, false);
+    element.addEventListener("touchend", onTouchEnd, false);
+})();
+</script>
+</body>
+</html>

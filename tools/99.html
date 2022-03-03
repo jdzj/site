@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>乘法口诀表 - 微录阁</title>
+<meta name="keywords" content="" />
+<meta name="description" content="在线乘法口诀表查询/>"
+
+</head>
+<body>
+<p>
+微录阁 <br />
+九九乘法口诀表
+</p>
+<hr />
+<style>
+ span{
+  display:inline-block;
+  background-color:green;
+  color:white;font-weight:bold;
+  margin:3px;
+  padding-left:5px;
+  width:64px;
+  height:20px; 
+ }
+</style>
+<div id="divTest">
+
+</div>
+<script>
+		window.onload = function (){
+			var d = document.getElementById("divTest");
+			var str = "";
+			for (var i = 2; i <= 9; i++) {
+				var count = i;
+                                //当达到2*2 3*3 则进入下一个训话
+				for (var j = 2; j <= count ; j++) {
+                                        //三元表达式对循环进行判断及拼接字符串
+					j == count ? str += "<span>" + j + "x" + count + "=" + j*count + "</span><br>":
+					str += "<span>" + j + "x" + count + "=" + j*count + "</span>";
+				}
+			}
+			//拼接的乘法口诀放入div列表中
+			d.innerHTML = str;
+		}
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f13133c93f4b299e1e0d2b27a7b8dc8e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

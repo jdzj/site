@@ -1,0 +1,116 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>排版助手 - 微录阁</title>
+<link href="./css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body onunload="javascript:gt.saveOption();" onkeydown="KeyDown();" onResize="javascript:resize();" style="margin:8px;">
+<CENTER>
+<TABLE cellpadding="0" cellspacing="0" width="98%" height="100%" >
+  <TBODY>
+    <TR>
+      <TD valign="top">
+		<div style="height:60%;">
+		    <div style="display:none;" id="gtform">
+		        <div class="line">
+		        </div>
+		        <div id="toolbar" style="width:100%;text-align:right;">
+			        <div style="float:right;">
+			            <a href="javascript:void(0);" onclick="javascript:run();" id="button" ><img border="0" src="img/0.gif"  style="margin:0px 0px 4px 4px;display:none;" id="sbi_0"/><img border="0" src="img/1.gif"  style="margin:0px 0px 4px 4px;"  id="sbi_1" onmouseover="showButtonImg(2);"/><img border="0" src="img/2.gif"  style="margin:0px 0px 4px 4px;display:none;" id="sbi_2" onmouseout="showButtonImg(1);"/></a><!--
+            <input type="button" id="button" name="" value="开始排版" style="width:90px;height:45px;font-size:14px;margin-bottom:6px;" onfocus="" />-->
+			        </div>
+			        <div style="" class="option">
+			            <div style="margin:0px 3px 0px 6px;">
+                                <input type="checkbox" id="xx_bd">
+                                <label for="xx_bd">
+                                    标点修正 
+                                </label>
+                                <input type="checkbox" id="xx_blx" checked>
+                                <label for="xx_blx">
+                                    波浪线修正 
+                                </label>
+                            |
+			                <select id="linespaceSelect">
+			                    <option value="1">
+			                        段落间无空行
+			                    </option>
+			                    <option value="2" selected>
+			                        段落间空一行
+			                    </option>
+			                    <option value="3">
+			                        段落间空两行
+			                    </option>
+			                    <option value="0">
+			                        不调整换行
+			                    </option>
+			                </select>&nbsp;<select id="fstStringSelect" onchange="javascript:showfstStringSpan()">
+			                    <option value="1">
+			                        不调整段落缩进
+			                    </option>
+			                    <option value="2" selected>
+			                        缩进:全角×2
+			                    </option>
+			                    <option value="3">
+			                        缩进:半角×4
+			                    </option>
+			                    <option value="4">
+			                        删首尾空格
+			                    </option>
+			                    <option value="0">
+			                        自定义缩进
+			                    </option>
+			                </select>&nbsp;<span id="fstStringSpan" style="display:none;"><input type="text" value="　　" id="fstString" style="width:30px;" />&nbsp;</span>
+			            </div>
+			            <div style="margin:3px 6px 0px 6px;">
+			                <a href="javascript:void(0);" style="color:#999999;" onclick="javascript:gt.clear();">清空文本</a>
+			                <a href="javascript:void(0);" onclick="javascript:gt.teststring();" style="color:#0088cc;" >测试文本</a>
+			                <a href="javascript:void(0);" onclick="javascript:gt.teststringForBiaodian();" style="color:#0088cc;" >标点测试文本</a>
+			                |
+			                全角与半角:<input type="radio" name="quanjiao" value="0" id="quanjiao_no" style="margin-top:4px;" checked/><label for="quanjiao_no">不转换</label>
+			                <input type="radio" name="quanjiao" value="1" id="quanjiao_q" style="margin-top:4px;" /><label for="quanjiao_q">到全角</label>
+			                <input type="radio" name="quanjiao" value="2" id="quanjiao_b" style="margin-top:4px;" /><label for="quanjiao_b">到半角
+			                </label>
+			            </div>
+			        </div>
+			    </div>
+		        <textarea name="text" id="textbox" style="width:100%;height:80%;padding:4px;line-height:140%;background-color:#f6f6f6;margin-bottom:4px;border-width : 1px;border-style : solid;border-color : gray;"></textarea>
+		    
+			    <div style="float:right;">
+			        <input type="checkbox" id="selectall" checked>
+			        <label for="selectall">
+			            排版后全选
+			        </label>
+			        
+			    </div>
+		    </div>
+		    <div class="line">
+		    </div>
+		    
+		    
+		    <span id="msg">
+		        加载中，请稍候...
+		    </span>
+		    
+			<div align="center" style="margin-top:7px;;">
+			  <span class="STYLE12"><a href="/tools">微录工具</a> | <a href="http://www.weiluge.com/" target="_blank">微录阁</a> | <a href="javascript:void(0);" onclick="javascript:changewindowsize(450,300);jumpwindow('./log.html?2021.9.30');"
+		         >更新日志 </a>
+      				<div style="width:500px;height:4px;margin:0px;padding:0px;font-size:4px;">&nbsp;</div>
+			      Copyright &copy; 2019 排版助手  All Rights Reserved&nbsp;&nbsp;
+			      <span style="display:none">
+				        <script src="https://s95.cnzz.com/z_stat.php?id=1261605131&web_id=1261605131" language="JavaScript"></script>				       
+			      </span>
+			  </span>
+			</div>
+			
+		</div>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</CENTER>
+<script>var fast = true;</script>
+<script language="javascript" type="text/javascript" src="./js/main.js?2012.12.02"></script>
+<script language="javascript" type="text/javascript" src="./js/gt.js?2013.06.25"></script>
+<script language="javascript" type="text/javascript" src="./js/b2q.js?2013.06.25"></script>
+</body>
+</html>

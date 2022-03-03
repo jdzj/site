@@ -1,0 +1,13 @@
+* {
+    font-family:宋体;
+    font-size:12px;
+    padding:0px;
+    margin:0px;
+}
+body{margin:0px;border:0px;}
+.option {margin:0px 0px 0px 7px;float:right;font-size:12px;}
+.option a{
+    font-size:12px;color:blue;
+    text-decoration : underline;
+}
+a{color:#0088cc;}

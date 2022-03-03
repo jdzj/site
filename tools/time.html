@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="这里啥都有，这里啥都没有。"/>
+<meta name="robots" content="nofollow">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Cache-Control" content="no-transform" /> 
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<base target="blank"/>
+<title>现在时间和闹钟 - 微录阁</title>
+<link rel="stylesheet" type="text/css" href="note/color-sticker.css">
+<script type="text/javascript" src="note/colorsticker.js"></script>
+<style type='text/css'>
+    li{
+	 width:300px!important;
+    }
+	#meerkat-wrap,#sitemix_pr_footer_js{
+display:none!important;}
+</style>	
+<!-- The main CSS file -->
+<link href="time/style.css" rel="stylesheet" />
+
+<!--[if lt IE 9]>
+<script src="time/html5.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div align="center">
+<div class="button-holder"><script src="./one/api.php"></script></div>
+</div>
+
+<div id="clock" class="light">
+	   <div class="display">
+		<div class="weekdays"></div>
+		<div class="ampm"></div>
+		<div class="alarm"></div>
+		<div class="digits"></div>
+	   </div>
+</div>
+
+<div class="button-holder">
+	<a id="switch-theme" class="button">换个颜色</a>
+	<a class="alarm-button"></a>
+</div>
+
+<!-- The dialog is hidden with css -->
+<div class="overlay">
+
+	<div id="alarm-dialog">
+
+		<h2>设置闹钟</h2>
+
+		<label class="hours">
+			时
+			<input type="number" value="0" min="0" />
+		</label>
+
+		<label class="minutes">
+			分
+			<input type="number" value="0" min="0" />
+		</label>
+
+		<label class="seconds">
+			秒
+			<input type="number" value="0" min="0" />
+		</label>
+
+		<div class="button-holder">
+			<a id="alarm-set" class="button blue">设置</a>
+			<a id="alarm-clear" class="button red">清除</a>
+		</div>
+
+		<a class="close"></a>
+
+	</div>
+
+</div>
+
+<div class="overlay">
+
+	<div id="time-is-up">
+
+		<h2>时间到啦！！！</h2>
+
+		<div class="button-holder">
+			<a class="button blue">关闭</a>
+		</div>
+
+	</div>
+
+</div>
+
+<audio id="alarm-ring" preload>
+	<source src="time/ticktac.mp3" type="audio/mpeg" />
+	<source src="time/ticktac.ogg" type="audio/ogg" />
+</audio>
+
+<!-- JavaScript 标题时间js -->
+
+	
+<!-- JavaScript timejs -->
+<script src="time/jquery.min.js"></script>
+<script src="time/moment.min.js"></script>
+<script src="time/script.js"></script>
+
+<!-- JavaScript notejs -->
+<script src="note/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="note/colorsticker.js"></script>
+
+<script type="text/javascript">
+	var stickers = [];
+	$('body').sticker({
+		saveStickerCallback: function(sticker){
+			alert('sticker info: left ' + sticker.left + ',top ' + sticker.top + ',content ' + sticker.content);
+		}
+	},stickers);
+</script>
+ 
+ <div style="display:none"><script src="https://s95.cnzz.com/z_stat.php?id=1261605131&web_id=1261605131" language="JavaScript"></script></div>
+
+</body>
