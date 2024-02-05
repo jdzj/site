@@ -1,11 +1,9 @@
-
 <!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Bing Photo of the Day for Plash</title>
-		<link rel="icon" type="image/png" sizes="64x64" href="icon-64.png">
+		<title>Bing Photo of the Day for Log</title>
 		<!-- Disabled until Plash can handle multiple image sizes and pick the best one -->
 		<!-- <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png"> -->
 		<style>
