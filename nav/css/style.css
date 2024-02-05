@@ -4,7 +4,7 @@ img { border-style: none;}
 li{ list-style: none; float: left}
 a{ text-decoration: none}
 body {	
-    background-image: url(https://bing-photo-of-the-day.netlify.app);
+    background-image: url(https://log.weiluge.com/images/bing.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
